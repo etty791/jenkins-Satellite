@@ -48,6 +48,7 @@ pipeline {
 
         echo "Storing build artifacts for future stages..."
         stash includes: 'build/**', name: 'satellite-build'
+        stash includes: "${env.DATA_DIR}/**", name: 'satellite-data'
       }
     }
 
@@ -85,6 +86,7 @@ pipeline {
 
         stage('Analyze fuel status') {
           steps {
+            unstash 'satellite-data'
             retry(2) {
                 echo "Analyzing fuel status (retry demo)..."
                 bat '''
