@@ -99,7 +99,8 @@ pipeline {
                 type %DATA_DIR%\\fuel.txt
                 '''
                 sleep time: 2, unit: 'SECONDS'
-              }
+            }
+          }
         }
 
         stage('Validate Combined Data') {
@@ -120,7 +121,7 @@ pipeline {
         steps {
             echo "The current branch is: ${env.BRANCH_NAME}"
             echo "The current branch is: ${env.GIT_BRANCH}"
-        }
+      }
     }
 
     stage('Generate Test Report') {
