@@ -35,7 +35,7 @@ pipeline {
         bat '''
         echo ORBIT_SIGNAL > %DATA_DIR%\\orbit.txt
         echo SENSOR_SIGNAL > %DATA_DIR%\\sensor.txt
-        echo FUEL_LEVEL: 85% > %DATA_DIR%\\fuel.txt
+        echo FUEL_LEVEL: 85%% > %DATA_DIR%\\fuel.txt
         
         dir %DATA_DIR%
         '''
