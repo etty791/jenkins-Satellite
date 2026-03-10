@@ -94,12 +94,12 @@ pipeline {
                 )
                 echo Step passed
                 '''
-                echo "Analyzing fuel status..."
-                bat '''
-                type %DATA_DIR%\\fuel.txt
-                '''
-                sleep time: 2, unit: 'SECONDS'
-            }
+                }
+              echo "Analyzing fuel status..."
+              bat '''
+              type %DATA_DIR%\\fuel.txt
+              '''
+              sleep time: 2, unit: 'SECONDS'
           }
         }
 
