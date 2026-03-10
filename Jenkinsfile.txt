@@ -145,7 +145,7 @@ pipeline {
     stage('Secure Deployment Preparation') {
 
       when {
-        expression { env.GIT_BRANCH == 'origin/main' and env.APP_ENV == 'staging' }
+        expression { env.GIT_BRANCH == 'origin/main' && env.APP_ENV == 'staging' }
       }
 
       steps {
